@@ -1,0 +1,14 @@
+package com.poseidon.dao;
+
+import com.poseidon.dto.MemberDTO;
+
+public class MemberDAO {
+	//로그인 하는 메소드
+	public MemberDTO login(MemberDTO dto) {
+		MemberDTO result = new MemberDTO();
+		result.setMname("통신되었습니다.");
+		
+		return result;
+		
+	}
+}

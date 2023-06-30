@@ -1,0 +1,21 @@
+package exception;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+//예외 처리하기
+public class Exception {
+	public static void main(String[] args) {
+		
+		FileReader fr = null;
+		try {
+			fr = new FileReader("c:\\temp\\temp.txt"); //자바 밖으로 나가서 파일 읽어옴
+			fr = new FileReader("c:/temp/temp.txt"); 
+			System.out.println("파일이 있습니다.");
+		} catch (FileNotFoundException e) {
+			//e.printStackTrace();
+			System.out.println("파일이 없습니다. 확인해주세요.");
+		}
+	}
+	
+}

@@ -1,0 +1,23 @@
+package iotest;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
+
+public class WriteExample03 {
+	public static void main(String[] args) throws IOException {
+		
+		Writer writer = new FileWriter("c:\\temp\\write.txy");
+		
+		writer.write('A');
+		writer.write("P");
+		writer.write("P");
+		writer.write("L");
+		writer.write("E");
+		
+		writer.flush();
+		writer.close();
+
+	}
+
+}

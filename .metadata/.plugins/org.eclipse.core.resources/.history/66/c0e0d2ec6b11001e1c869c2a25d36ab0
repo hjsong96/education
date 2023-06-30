@@ -1,0 +1,9 @@
+package dbConn;
+//자바와 데이터베이스를 연결하겠습니다.
+//2023-06-23
+public class DB01 {
+	public static void main(String[] args) {
+
+	}
+
+}

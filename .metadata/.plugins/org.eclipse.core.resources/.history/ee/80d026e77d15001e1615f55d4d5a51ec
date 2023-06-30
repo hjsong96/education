@@ -1,0 +1,22 @@
+package threadex;
+
+import java.awt.Toolkit;
+
+public class Thread01 {
+	public static void main(String[] args) throws InterruptedException {
+		
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
+		toolkit.beep();
+		Thread.sleep(5000); //1초
+		toolkit.beep();
+		Thread.sleep(5000); //1초
+		toolkit.beep();
+		Thread.sleep(5000); //1초
+		toolkit.beep();
+		Thread.sleep(5000); //1초
+		for (int i = 0; i < 5; i++) {
+			toolkit.beep();
+		}
+	}
+
+}

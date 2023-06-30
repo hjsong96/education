@@ -1,0 +1,28 @@
+package cat;
+
+class Cat{
+	public int run() {
+		
+		int random = (int) (Math.random() * 5 + 1);
+		System.out.println(random);
+		//1 ~ 5 무작위 숫자
+		return 1;
+	}
+	
+	public int run(int roomNumber) {
+		//인접 숫자로 이동 1 == 2, 5 == 4
+	}
+	
+	
+}
+
+
+public class MS {
+	public static void main(String[] args) {
+
+		Cat cat = new Cat();
+		cat.run();
+		
+	}
+
+}

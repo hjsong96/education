@@ -1,0 +1,43 @@
+package exception;
+
+/*
+ * try를 활용하여 오류를 막고 다른 부분까지 실행되게 할 수 있습니다.
+ * 
+ * 처리방법
+ * 1. 직접처리
+ * 		try{
+ * 			Exception 이 발생할 코드
+ * 		} catch(Exception e) {
+ * 		 	예외가 발생하면 실행할 코드
+ * 		} finally {
+ * 			예외 발생여부와 상관없이 공통적으로 실행할 코드
+ * 		}
+ * 
+ * 2. 던지기 (Throw)
+ * 		메소드 뒷 부분에 throw 처리할 타입을 적어줍니다.
+ * 		메소드가 실행되다가 예외를 만나면 메소드를 호출한 쪽으로
+ * 		예외를 던집니다.
+ * 		이 던지기가 main 메소드까지 온다면 vm 으로 던지고 강제 종료됩니다.
+ * 
+ * 3. 직접 Exception 객체를 만들어서 처리하기
+ * 		예외 객체를 만들어서 처리하기
+ * 		throw 객체명;
+ * 
+ * 			@override
+ * 			public void printStrackTrace(){
+ * 				System.out.print("예외가 발생했습니다.");
+ * 				super.printStrackTrace();
+ * 			}
+ */
+
+
+public class Exception04 {
+	public static void main(String[] args) {
+		
+		int[] arr01 = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+		
+		System.out.println(arr01[arr01.length]);
+		
+		
+	}
+}

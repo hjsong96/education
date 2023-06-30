@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>로그인</title>
+<style type="text/css">
+
+#loginBox{
+	/* id = #, class= . */
+	background-color: #c1c1c1; 
+	width: 300px;
+	height: 300px;
+}
+
+
+
+</style>
+</head>
+<body>
+	<div id="loginBox">
+		<input type="text">
+		<br>
+		<input type="password">
+
+
+
+</div>
+</body>
+</html>

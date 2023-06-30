@@ -1,0 +1,27 @@
+package threadEx;
+
+import java.awt.Toolkit;
+
+public class Thread03 extends Thread {
+	int seq;
+	
+	public Thread03(int seq) {
+		this.seq = seq;
+	}
+	
+	@Override
+	public void run() {
+		System.out.println(this.seq + "번째 스래드 시작");
+		Thread.sleep(1000);
+		System.out.println(this.seq + "번째 스래드 끝");
+	}
+	
+	
+	public static void main(String[] args) {
+
+		
+		
+		
+	}
+
+}

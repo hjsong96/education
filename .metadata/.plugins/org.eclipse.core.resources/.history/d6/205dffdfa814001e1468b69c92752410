@@ -1,0 +1,10 @@
+package cat;
+
+public class MS {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>main입니다.</title>
+</head>
+<body>
+	<a href="./index.jsp">index로 가기</a>
+	<table>
+	<tr>
+		<td>번호</td>
+		<td>제목</td>
+		<td>글쓴이</td>
+		<td>조회수</td>
+		<td>쓴날짜</td>
+	</tr>
+	</table>
+</body>
+</html>

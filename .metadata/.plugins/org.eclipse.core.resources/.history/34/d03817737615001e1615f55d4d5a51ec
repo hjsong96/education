@@ -1,0 +1,20 @@
+package map;
+
+import java.util.HashMap;
+
+public class Map02 {
+	public static void main(String[] args) {
+
+		HashMap<String, String> map02 = new HashMap<String, String>();
+		map02.put("1", "사과");
+		map02.put("6", "배");
+		map02.put("A", "포도");
+		map02.put("a", "망고");
+		map02.put("가", "두리안");
+		
+		System.out.println(map02);
+		
+		
+	}
+
+}

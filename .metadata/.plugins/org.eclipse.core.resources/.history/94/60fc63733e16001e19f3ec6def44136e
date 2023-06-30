@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index 페이지 입니다.</title>
+<style type="text/css">
+
+button {
+
+background-color : skyblue;
+border: 0px;
+
+
+}
+
+</style>
+
+</head>
+<body>
+	<button onclick="location.href='./login.jsp'">로그인</button>
+
+</body>
+</html>

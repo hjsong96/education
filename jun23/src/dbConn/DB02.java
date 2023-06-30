@@ -1,0 +1,93 @@
+package dbConn;
+
+import java.beans.Encoder;
+import java.lang.annotation.Native;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DB02 {
+	public static void main(String[] args) {
+
+		final String URL = "jdbc:mariadb://localhost:3306/employees";
+		final String ID = "root";
+		final String PW = "0614";
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		List<Employee> member = new ArrayList<Employee>();
+
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+			
+			conn = DriverManager.getConnection(URL, ID, PW);
+			stmt = conn.createStatement();
+			String sql = "SELECT * FROM employees LIMIT 10";
+			rs = stmt.executeQuery(sql);
+			
+			while (rs.next()) {
+				Employee e = new Employee();
+				System.out.println(e);
+				e.setEmp_no(rs.getInt("emp_no"));
+				e.setBirth_date(rs.getString("birth_date"));
+				e.setFirst_name(rs.getString("first_name"));
+				e.setLast_name(rs.getString("last_name"));
+				e.setGender(rs.getString("gender"));
+				e.setHire_date(rs.getString("hire_date"));
+				member.add(e);
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {// 마지막에 연 것부터 닫습니다.
+			try {
+				rs.close();
+				stmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println("번호\t 생년월일\t\t이름\t\t성\t    성별\t\t입사일");
+		System.out.println("--------------------------------------------------------------------");
+		for (Employee e : member) {
+			System.out.printf("%3d  ", e.getEmp_no());
+			System.out.printf("%10s  ", e.getBirth_date());
+			System.out.printf("%-15s  ", e.getFirst_name());
+			System.out.printf("%-15s  ", e.getLast_name());
+			System.out.printf("%2s  " , e.getGender());
+			System.out.printf("%10s\n", e.getHire_date());
+		}
+		
+		for (int i = 0; i < member.size(); i++) {
+			System.out.println(member.get(i).getEmp_no());
+		}
+		
+	}
+}
+
+/*
+ * DTO(Data Transefer Object) -> EmployeeDTO (데이터 전송 객체)
+ * VO(Value Object) -> 값 객체  
+ * ※ 배달의 민족 DTO VO 역사, 왜 같은 이름으로 부르는지
+ * DAO(Data Access Object) -> SQL
+ * Connection -> DB접속 정보 -> 싱글턴 패턴
+ * 
+ * 
+ * 5팀 문제 : DTO, VO 차이 논문으로 써서...
+ * 4팀 문제 : byte에 128을 입력하면 잘못된 값이 나오는 이유
+ * 			  @Native public static final int MIN_VALUE = 0x80000000;
+ * 3팀 문제 : c언어에서 말하는 포인터란 무엇인가.
+ * 2팀 문제 : IDE 종류에 대해 알아오세요.
+ * 1팀 문제 : 컬랙션에서 capacity.
+ * 
+ * 
+ */
+
+

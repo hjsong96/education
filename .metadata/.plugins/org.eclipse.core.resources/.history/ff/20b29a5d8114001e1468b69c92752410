@@ -1,0 +1,23 @@
+package inner;
+//중첩 클래스
+//클래스 속 클래스 406 페이지
+//2023-06-27
+
+class A{
+	//멤버필드
+	public void me1() {
+		class B {}
+	}
+	
+	public void me2() {
+		class B {}
+	}
+	
+}
+
+
+public class Inner {
+	public static void main(String[] args) {
+		A a = new A();
+	}
+}

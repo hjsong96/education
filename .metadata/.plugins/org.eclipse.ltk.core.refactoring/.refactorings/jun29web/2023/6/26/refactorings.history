@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;DBConnection.java&apos; to &apos;jun29web/src/main/java/com.poseidon.db&apos;&#x0D;&#x0A;- Original project: &apos;jun29web&apos;&#x0D;&#x0A;- Destination element: &apos;jun29web/src/main/java/com.poseidon.db&apos;&#x0D;&#x0A;- Original element: &apos;com.poseidon.dto.DBConnection.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java&lt;com.poseidon.db" element1="/src\/main\/java&lt;com.poseidon.dto{DBConnection.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1688026622507" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,11 @@
+package threadex;
+//익명 객체로 만들기
+public class BeepPrintEx5 {
+	public static void main(String[] args) {
+		Thread thread = new Thread() {
+			
+			
+			
+		}; //생성자 끝
+	}
+}

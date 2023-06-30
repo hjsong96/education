@@ -1,0 +1,34 @@
+package file;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FileEx {
+	public static void main(String[] args) throws IOException {
+
+		File dir = new File("c:\\temp\\images");
+		File file1 = new File("c:\\temp\\file1.txt");
+		File file2 = new File("c:\\temp\\file2.txt");
+		File file3 = new File("c:\\temp\\file3.txt");
+
+		if (!dir.exists()) {
+			dir.mkdir();
+		}
+		if (!file1.exists()) {
+			file1.createNewFile();
+		}
+		if (!file2.exists()) {
+			file2.createNewFile();
+		}
+		if (!file3.exists()) {
+			file3.createNewFile();
+		}
+		
+		File temp = new File("c:\\temp");
+		File[] contents = temp.listFiles();
+		
+		System.out.println("시간\t\t형태\t\t크기\t이름");
+		System.out.println("-------------------------------------");
+	}
+
+}
